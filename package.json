@@ -13,6 +13,7 @@
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
+    "sharp": "^0.33.4",
     "tw-merge": "^0.0.1-alpha.3"
   },
   "devDependencies": {

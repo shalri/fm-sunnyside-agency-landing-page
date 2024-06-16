@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 .hero-bg {
-  background: url(../public/images/mobile/image-header.jpg) no-repeat center;
+  background: url(/images/mobile/image-header.jpg) no-repeat center;
   background-size: cover;
   background-position: center;
 }
@@ -15,17 +15,19 @@
   background-position: center;
 }
 .transform-bg {
-  background: url(../images/mobile/image-transform.jpg) no-repeat center;
+  background: url(../public/images/mobile/image-transform.jpg) no-repeat center;
   background-size: cover;
   background-position: center;
 }
 .graphic-design-bg {
-  background: url(../images/mobile/image-graphic-design.jpg) no-repeat center;
+  background: url(../public/images/mobile/image-graphic-design.jpg) no-repeat
+    center;
   background-size: cover;
   background-position: center;
 }
 .photography-bg {
-  background: url(../images/mobile/image-photography.jpg) no-repeat center;
+  background: url(../public/images/mobile/image-photography.jpg) no-repeat
+    center;
   background-size: cover;
   background-position: center;
 }

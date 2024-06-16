@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Barlow, Fraunces } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const barlow = Barlow({ subsets: ["latin"], weight: ["600"] });
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  weight: ["700", "900"],
+});
 
 export const metadata: Metadata = {
-  title: "次に(tsugini) | FScode",
-  description: "A basic NextJS template for Frontend Mentor Challenges",
+  title: "Sunnyside Agency | FScode",
+  description: "A landing page challenge from Frontend Mentor",
 };
 
 export default function RootLayout({
@@ -16,7 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex min-h-screen flex-col`}>
+      <body
+        className={`${barlow.className} flex min-h-screen flex-col bg-ss-dark-blue`}
+      >
         {children}
       </body>
     </html>

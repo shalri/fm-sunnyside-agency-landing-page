@@ -5,7 +5,8 @@
 @tailwind utilities;
 
 .hero-bg {
-  background: url(../public/images/mobile/image-header.jpg) no-repeat center;
+  background: url(/fm-sunnyside-agency-landing-page/images/mobile/image-header.jpg)
+    no-repeat center;
   background-size: cover;
   background-position: center;
 }

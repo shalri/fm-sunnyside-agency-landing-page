@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+
 export default function Hero() {
   return (
     <section className="hero-bg flex h-[540px] w-full flex-col items-center justify-center gap-y-14">
@@ -14,6 +15,7 @@ export default function Hero() {
           className="object-contain"
         />
       </div>
+      <a href="#" className=""></a>
     </section>
   );
 }

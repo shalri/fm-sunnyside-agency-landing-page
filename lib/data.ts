@@ -1,6 +1,18 @@
 import emilyImg from "../public/images/image-emily.jpg";
 import jennieImg from "../public/images/image-jennie.jpg";
 import thomasImg from "../public/images/image-thomas.jpg";
+import coneDeskImg from "../public/images/desktop/image-gallery-cone.jpg";
+import coneMobileImg from "../public/images/mobile/image-gallery-cone.jpg";
+import milkbottlesDeskImg from "../public/images/desktop/image-gallery-milkbottles.jpg";
+import milkbottlesMobileImg from "../public/images/mobile/image-gallery-milkbottles.jpg";
+import orangeDeskImg from "../public/images/desktop/image-gallery-orange.jpg";
+import orangeMobileImg from "../public/images/mobile/image-gallery-orange.jpg";
+import sugarcubesDeskImg from "../public/images/desktop/image-gallery-sugarcubes.jpg";
+import sugarcubesMobileImg from "../public/images/mobile/image-gallery-sugar-cubes.jpg";
+import fbIcon from "../public/images/icon-facebook.svg";
+import igIcon from "../public/images/icon-instagram.svg";
+import pinterestIcon from "../public/images/icon-pinterest.svg";
+import twitterIcon from "../public/images/icon-twitter.svg";
 
 export const propositions = [
   {
@@ -89,18 +101,41 @@ export const footerLinks = [
 export const socials = [
   {
     link: "Facebook",
-    icon: "",
+    icon: fbIcon,
+    url: "#",
   },
   {
     link: "Instagram",
-    icon: "",
+    icon: igIcon,
+    url: "#",
   },
   {
     link: "Twitter",
-    icon: "",
+    icon: twitterIcon,
+    url: "#",
   },
   {
     link: "Pinterest",
-    icon: "",
+    icon: pinterestIcon,
+    url: "#",
+  },
+];
+
+export const gallery = [
+  {
+    desktopImg: milkbottlesDeskImg,
+    mobileImg: milkbottlesMobileImg,
+  },
+  {
+    desktopImg: orangeDeskImg,
+    mobileImg: orangeMobileImg,
+  },
+  {
+    desktopImg: coneDeskImg,
+    mobileImg: coneMobileImg,
+  },
+  {
+    desktopImg: sugarcubesDeskImg,
+    mobileImg: sugarcubesMobileImg,
   },
 ];

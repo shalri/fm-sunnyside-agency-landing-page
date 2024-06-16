@@ -19,6 +19,18 @@
   background-size: cover;
   background-position: center;
 }
+.graphic-design-bg {
+  background: url(../public/images/mobile/image-graphic-design.jpg) no-repeat
+    center;
+  background-size: cover;
+  background-position: center;
+}
+.photography-bg {
+  background: url(../public/images/mobile/image-photography.jpg) no-repeat
+    center;
+  background-size: cover;
+  background-position: center;
+}
 .hamburger {
   padding: 15px 15px;
   display: inline-block;

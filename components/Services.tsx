@@ -1,10 +1,15 @@
+import { services } from "@/lib/data";
+import { cn } from "@/lib/utils";
+
 export default function Services() {
   return (
     <section className="">
-      <div className="">
-        <h1 className="font-bold">test</h1>
-        <p></p>
-      </div>
+      {services.map((service, i) => (
+        <div key={i} className={cn(`${service?.banner}`)}>
+          <h1 className="font-bold">{service?.heading}</h1>
+          <p>{service?.copy}</p>
+        </div>
+      ))}
     </section>
   );
 }

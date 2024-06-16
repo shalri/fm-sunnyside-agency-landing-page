@@ -1,3 +1,7 @@
+import emilyImg from "../public/images/image-emily.jpg";
+import jennieImg from "../public/images/image-jennie.jpg";
+import thomasImg from "../public/images/image-thomas.jpg";
+
 export const propositions = [
   {
     heading: "Transform your brand",
@@ -14,7 +18,7 @@ export const services = [
   {
     heading: "Graphic design",
     copy: "Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.",
-    banner: "graphic-desigh-bg",
+    banner: "graphic-design-bg",
   },
   {
     heading: "Photography",
@@ -30,18 +34,21 @@ export const testimonials = [
       "We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.",
     client: "Emily R.",
     position: "Marketing Director",
+    avatarSrc: emilyImg,
   },
   {
     testimonial:
       "Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.",
     client: "Thomas S.",
     position: "Chief Operating Officer",
+    avatarSrc: thomasImg,
   },
   {
     testimonial:
       "Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!",
     client: "Jennie F.",
     position: "Business Owner",
+    avatarSrc: jennieImg,
   },
 ];
 

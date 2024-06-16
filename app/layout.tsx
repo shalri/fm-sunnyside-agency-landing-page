@@ -20,9 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${barlow.className} flex min-h-screen flex-col bg-ss-dark-blue`}
-      >
+      <body className={`${barlow.className} flex min-h-screen flex-col`}>
         {children}
       </body>
     </html>

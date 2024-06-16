@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,7 +9,16 @@
   background-size: cover;
   background-position: center;
 }
-
+.stand-out-bg {
+  background: url(../public/images/mobile/image-stand-out.jpg) no-repeat center;
+  background-size: cover;
+  background-position: center;
+}
+.transform-bg {
+  background: url(../public/images/mobile/image-transform.jpg) no-repeat center;
+  background-size: cover;
+  background-position: center;
+}
 .hamburger {
   padding: 15px 15px;
   display: inline-block;

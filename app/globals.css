@@ -4,6 +4,49 @@
 @tailwind components;
 @tailwind utilities;
 
+.fade-in {
+  animation: fadeIn 2s both;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-out {
+  animation: fadeOut 2s both;
+}
+@keyframes fadeOut {
+  0% {
+    transform: rotate(0);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.mobile-nav::before {
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: rgb(48, 52, 54);
+}
+.mobile-nav::before {
+  content: "";
+  position: absolute;
+  border-top: 25px solid transparent;
+  border-left: 10px solid transparent;
+  border-right: 25px solid #fff;
+  top: -25px;
+  right: 0;
+}
+
 .hero-bg {
   /* Change to this url when deploying weird bug in NextJS. First time this
    * happend */
@@ -37,7 +80,7 @@
   background-position: center;
 }
 .hamburger {
-  padding: 15px 15px;
+  /* padding: 15px 15px; */
   display: inline-block;
   cursor: pointer;
   transition-property: opacity, filter;
@@ -60,12 +103,14 @@
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-  background-color: #000;
+  background-color: #fff;
 }
 
 .hamburger-box {
+  /* width: 40px; */
+  /* height: 24px; */
   width: 40px;
-  height: 24px;
+  height: 20px;
   display: inline-block;
   position: relative;
 }
@@ -78,9 +123,11 @@
 .hamburger-inner,
 .hamburger-inner::before,
 .hamburger-inner::after {
-  width: 40px;
-  height: 4px;
-  background-color: #000;
+  /* width: 40px; */
+  /* height: 4px; */
+  width: 32px;
+  height: 2px;
+  background-color: #fff;
   border-radius: 4px;
   position: absolute;
   transition-property: transform;

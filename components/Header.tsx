@@ -50,7 +50,15 @@ export default function Header() {
         >
           {navLinks.map((link) => (
             <li className="" key={link.url}>
-              <a href={link.url} className="text-xl text-ss-dark-grayish-blue">
+              <a
+                href={link.url}
+                className={cn(
+                  "text-xl text-ss-dark-grayish-blue",
+                  link.page === "Contact"
+                    ? "inline-block rounded-l-full rounded-r-full bg-ss-yellow px-8 py-4 font-fraunces text-[15px] uppercase text-ss-very-dark-desaturated-blue"
+                    : "",
+                )}
+              >
                 {link.page}
               </a>
             </li>

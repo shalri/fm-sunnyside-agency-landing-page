@@ -6,7 +6,9 @@ export default function Services() {
     <section className="">
       {services.map((service, i) => (
         <div key={i} className={cn(`${service?.banner}`)}>
-          <h1 className="font-bold">{service?.heading}</h1>
+          <h1 className="font-fraunces text-xl font-bold">
+            {service?.heading}
+          </h1>
           <p>{service?.copy}</p>
         </div>
       ))}

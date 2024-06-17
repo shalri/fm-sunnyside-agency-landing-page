@@ -17,7 +17,7 @@ const config: Config = {
         "ss-dark-moderate-cyan": "hsl(168, 34%, 41%)", // (footer)
         // Neutral
         "ss-very-dark-desaturated-blue": "hsl(212, 27%, 19%)",
-        "ss-Very-dark-grayish-blue": "hsl(213, 9%, 39%)",
+        "ss-very-dark-grayish-blue": "hsl(213, 9%, 39%)",
         "ss-dark-grayish-blue": "hsl(232, 10%, 55%)",
         "ss-grayish-blue": "hsl(210, 4%, 67%)",
         "ss-white": "hsl(0, 0%, 100%)",

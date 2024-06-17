@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 .fade-in {
-  animation: fadeIn 2s both;
+  animation: fadeIn 0.3s both;
 }
 @keyframes fadeIn {
   0% {
@@ -57,7 +57,7 @@
 
   background: url(/images/mobile/image-header.jpg) no-repeat center;
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
 }
 .stand-out-bg {
   background: url(/images/mobile/image-stand-out.jpg) no-repeat center;

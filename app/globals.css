@@ -79,6 +79,40 @@
   background-size: cover;
   background-position: top;
 }
+@media (min-width: 640px) {
+  .hero-bg {
+    /* Change to this url when deploying weird bug in NextJS. First time this
+   * happend */
+    /* background: url(/fm-sunnyside-agency-landing-page/images/mobile/image-header.jpg) */
+    /*   no-repeat center; */
+    /* This worked on last project  now it's broken */
+    /* background: url(../public/images/mobile/image-stand-out.jpg) no-repeat center; */
+
+    background: #3dbeff url(/images/desktop/image-header.jpg) no-repeat center;
+    background-size: contain;
+    background-position: bottom;
+  }
+  .stand-out-bg {
+    background: url(/images/desktop/image-stand-out.jpg) no-repeat center;
+    background-size: cover;
+    background-position: center;
+  }
+  .transform-bg {
+    background: url(/images/desktop/image-transform.jpg) no-repeat center;
+    background-size: cover;
+    background-position: center;
+  }
+  .graphic-design-bg {
+    background: url(/images/desktop/image-graphic-design.jpg) no-repeat center;
+    background-size: cover;
+    background-position: top;
+  }
+  .photography-bg {
+    background: url(/images/desktop/image-photography.jpg) no-repeat center;
+    background-size: cover;
+    background-position: top;
+  }
+}
 .hamburger {
   /* padding: 15px 15px; */
   display: inline-block;

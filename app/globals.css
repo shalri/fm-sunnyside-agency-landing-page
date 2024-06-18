@@ -72,12 +72,12 @@
 .graphic-design-bg {
   background: url(/images/mobile/image-graphic-design.jpg) no-repeat center;
   background-size: cover;
-  background-position: center;
+  background-position: top;
 }
 .photography-bg {
   background: url(/images/mobile/image-photography.jpg) no-repeat center;
   background-size: cover;
-  background-position: center;
+  background-position: top;
 }
 .hamburger {
   /* padding: 15px 15px; */

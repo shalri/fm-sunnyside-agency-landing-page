@@ -28,7 +28,7 @@ export const propositions = [
 ];
 export const services = [
   {
-    heading: "Graphic design",
+    heading: "Graphic Design",
     copy: "Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.",
     banner: "graphic-design-bg",
   },

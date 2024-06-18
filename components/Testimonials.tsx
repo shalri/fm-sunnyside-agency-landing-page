@@ -3,11 +3,16 @@ import Image from "next/image";
 
 export default function Testimonials() {
   return (
-    <section className="">
-      <h2 className="text-ss-grayish-blue">Client testimonials</h2>
+    <section className="pb-24 pt-16">
+      <h2 className="text-center font-fraunces font-bold uppercase tracking-[0.25rem] text-ss-grayish-blue">
+        Client testimonials
+      </h2>
       {testimonials.map((testimony) => (
-        <div className="" key={testimony.client}>
-          <div className="relative h-20 w-20 overflow-hidden rounded-full">
+        <div
+          className="flex flex-col items-center px-6 pt-16 text-center"
+          key={testimony.client}
+        >
+          <div className="relative h-[70px] w-[70px] overflow-hidden rounded-full">
             <Image
               src={testimony.avatarSrc}
               fill
@@ -15,8 +20,10 @@ export default function Testimonials() {
               className="object-contain"
             />
           </div>
-          <p className="">{testimony.testimonial}</p>
-          <h3 className="font-fraunces">{testimony.client}</h3>
+          <p className="py-9 text-lg text-ss-dark-grayish-blue">
+            {testimony.testimonial}
+          </p>
+          <h3 className="mb-2 font-fraunces text-xl">{testimony.client}</h3>
           <h4 className="text-ss-grayish-blue">{testimony.position}</h4>
         </div>
       ))}

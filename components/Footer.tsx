@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#90d4c5] px-3">
-      <div className="container mx-auto px-3 py-6 text-right">
+    <footer className="w-full bg-[#90d4c5]">
+      <div className="">
         <svg
           width="124"
           height="24"

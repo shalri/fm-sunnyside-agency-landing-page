@@ -26,12 +26,12 @@ export default function Projects() {
                 {proposal.copy}
               </p>
               <div className="group flex cursor-pointer flex-col items-center sm:items-start">
-                <div className="z-[5] font-fraunces font-bold uppercase text-ss-very-dark-desaturated-blue">
+                <div className="z-[5] font-fraunces font-bold uppercase text-ss-very-dark-desaturated-blue sm:pl-2">
                   Learn more
                 </div>
                 <div
                   className={cn(
-                    "-mt-2 h-[10px] w-[130px] rounded-full bg-black bg-ss-yellow/30 transition-all duration-300 group-hover:bg-ss-yellow/80",
+                    "-mt-[10px] h-[10px] w-[130px] rounded-full bg-black bg-ss-yellow/30 transition-all duration-300 group-hover:bg-ss-yellow/80",
                     i === 1 &&
                       "bg-ss-soft-red/30 group-hover:bg-ss-soft-red/80",
                   )}

@@ -9,7 +9,7 @@ export default function Services() {
         <div
           key={i}
           className={cn(
-            `${service?.banner} flex min-h-[600px] flex-col justify-end gap-y-7 px-4 py-16 text-center text-ss-dark-desaturated-cyan sm:w-[50%]`,
+            `${service?.banner} flex min-h-[600px] flex-col justify-end gap-y-7 px-4 py-16 text-center text-ss-dark-desaturated-cyan sm:w-[50%] lg:h-[700px]`,
             i === 1 && "text-ss-dark-blue",
           )}
         >

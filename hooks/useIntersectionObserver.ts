@@ -1,39 +1,29 @@
 import { useEffect, useRef, useState } from "react";
 
-const useIntersectionObserver = (
-  className: string,
-  threshold: number = 0.1,
-) => {
-  const [visibleItems, setVisibleItems] = useState<number[]>([]);
-  const observer = useRef<IntersectionObserver | null>(null);
+export function useIntersectionObserver(threshold = 0.5) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [hasBeenViewed, setHasBeenViewed] = useState(false);
 
   useEffect(() => {
-    observer.current = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const itemIndex = parseInt(
-              entry.target.getAttribute("data-index") || "0",
-              10,
-            );
-            setVisibleItems((prev) => [...prev, itemIndex]);
-          }
-        });
+    const currentElement = ref.current;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasBeenViewed) {
+          setHasBeenViewed(true);
+        }
       },
       { threshold },
     );
-
-    const elements = document.querySelectorAll(className);
-    elements.forEach((element) => observer.current?.observe(element));
+    if (currentElement) {
+      observer.observe(currentElement);
+    }
 
     return () => {
-      if (observer.current) {
-        observer.current.disconnect();
+      if (currentElement) {
+        observer.unobserve(currentElement);
       }
     };
-  }, [className, threshold]);
-
-  return visibleItems;
-};
-
-export default useIntersectionObserver;
+  }, [hasBeenViewed, threshold]);
+  return { ref, hasBeenViewed };
+}

@@ -1,5 +1,7 @@
+"use client";
 import { testimonials } from "@/lib/data";
 import Image from "next/image";
+import TestimonialCards from "./TestimonialCards";
 
 export default function Testimonials() {
   return (
@@ -8,25 +10,8 @@ export default function Testimonials() {
         Client testimonials
       </h2>
       <div className="sm:grid sm:grid-cols-3 sm:content-evenly sm:justify-items-center">
-        {testimonials.map((testimony) => (
-          <div
-            className="flex flex-col items-center px-6 pt-16 text-center sm:max-w-[390px] lg:max-w-[420px]"
-            key={testimony.client}
-          >
-            <div className="relative h-[70px] w-[70px] overflow-hidden rounded-full">
-              <Image
-                src={testimony.avatarSrc}
-                fill
-                alt={`${testimony.client} avatar`}
-                className="object-contain"
-              />
-            </div>
-            <p className="py-9 text-lg text-ss-dark-grayish-blue">
-              {testimony.testimonial}
-            </p>
-            <h3 className="mb-2 font-fraunces text-xl">{testimony.client}</h3>
-            <h4 className="text-ss-grayish-blue">{testimony.position}</h4>
-          </div>
+        {testimonials.map((testimony, i) => (
+          <TestimonialCards key={i} testimony={testimony} index={i} />
         ))}
       </div>
     </section>

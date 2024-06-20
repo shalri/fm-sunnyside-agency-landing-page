@@ -38,6 +38,9 @@ const config: Config = {
         // "sample-bg": "/tsugini" // basepath of github pages
       },
       screens: {
+        sm: "768px",
+        md: "920px",
+        lg: "1000px",
         mobile: "375px",
         desktop: "1440px",
       },

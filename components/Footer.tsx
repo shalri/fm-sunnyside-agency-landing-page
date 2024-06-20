@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="flex w-full flex-col items-center bg-[#90d4c5] px-4 pb-20 pt-16">
+    <footer id="contact" className="flex w-full flex-col items-center bg-[#90d4c5] px-4 pb-20 pt-16">
       {/* <div className="h-[34px] w-[172px]"> */}
       <svg
         width="124"

@@ -4,32 +4,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.fade-in {
-  animation: fadeIn 0.3s both;
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.fade-out {
-  animation: fadeOut 2s both;
-}
-@keyframes fadeOut {
-  0% {
-    transform: rotate(0);
-    opacity: 1;
-  }
-  50% {
-    transform: rotate(360deg);
-  }
-  100% {
-    opacity: 0;
-  }
+.no-scroll {
+  overflow: hidden;
 }
 
 .mobile-nav::before {
@@ -43,7 +19,7 @@
   border-top: 25px solid transparent;
   border-left: 10px solid transparent;
   border-right: 25px solid #fff;
-  top: -25px;
+  top: -23px;
   right: 0;
 }
 
@@ -79,7 +55,7 @@
   background-size: cover;
   background-position: top;
 }
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   .hero-bg {
     /* Change to this url when deploying weird bug in NextJS. First time this
    * happend */
@@ -114,7 +90,7 @@
   }
 }
 .hamburger {
-  /* padding: 15px 15px; */
+  /* padding: 15px 10px 15px 10px; */
   display: inline-block;
   cursor: pointer;
   transition-property: opacity, filter;
@@ -123,7 +99,7 @@
   font: inherit;
   color: inherit;
   text-transform: none;
-  background-color: transparent;
+  /* background-color: transparent; */
   border: 0;
   margin: 0;
   overflow: visible;

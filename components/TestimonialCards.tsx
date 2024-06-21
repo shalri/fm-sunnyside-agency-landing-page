@@ -11,26 +11,26 @@ interface TestimonialCardProps {
 
 const avatarAnimation = {
   hidden: { opacity: 0, scale: 0.5 },
-  visible: {
+  visible: (index: number) => ({
     opacity: 1,
     scale: 1,
     rotateY: 360,
     transition: {
-      delay: 0.5,
+      delay: 0.5 * index,
       duration: 0.6,
     },
-  },
+  }),
 };
 
 const clientNameAnimation = {
   hidden: { opacity: 0, scale: 1.5 },
-  visible: {
+  visible: (index: number) => ({
     opacity: 1,
     scale: 1,
     transition: {
-      delay: 1,
+      delay: 0.5 * index,
     },
-  },
+  }),
 };
 
 export default function TestimonialCards({
@@ -46,8 +46,13 @@ export default function TestimonialCards({
     >
       <motion.div
         initial="hidden"
-        animate={hasBeenViewed ? "visible" : "hidden"}
+        // animate={hasBeenViewed ? "visible" : "hidden"}
+        whileInView="visible"
+        viewport={{
+          once: true,
+        }}
         variants={avatarAnimation}
+        custom={index}
         className="relative h-[70px] w-[70px] overflow-hidden rounded-full"
       >
         <Image
@@ -62,8 +67,13 @@ export default function TestimonialCards({
       </p>
       <motion.h3
         initial="hidden"
-        animate={hasBeenViewed ? "visible" : "hidden"}
+        // animate={hasBeenViewed ? "visible" : "hidden"}
         variants={clientNameAnimation}
+        whileInView="visible"
+        viewport={{
+          once: true,
+        }}
+        custom={index}
         className="mb-2 font-fraunces text-xl"
       >
         {testimony.client}

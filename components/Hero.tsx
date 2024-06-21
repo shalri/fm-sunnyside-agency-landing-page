@@ -1,11 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Hero() {
   const handleClick = () => {
-    // Scroll to the element with id="project"
     const projectSection = document.getElementById("projects");
     if (projectSection) {
       projectSection.scrollIntoView({ behavior: "smooth" });
@@ -35,7 +33,6 @@ export default function Hero() {
   return (
     <section
       id="about"
-      // className="hero-bg group flex h-[480px] w-full flex-col items-center justify-center gap-y-14 bg-[#3dbeff] sm:h-[600px] sm:justify-start sm:gap-y-24 lg:h-[720px]"
       className="hero-bg group flex min-h-[95dvh] w-full cursor-pointer flex-col items-center justify-center gap-y-14 overflow-hidden bg-[#3dbeff] sm:h-[600px] sm:justify-start sm:gap-y-24 lg:h-[720px]"
       onClick={handleClick}
     >

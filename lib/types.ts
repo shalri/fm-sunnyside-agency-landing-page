@@ -12,3 +12,9 @@ export interface Testimony {
   testimonial: string;
   position: string;
 }
+
+export interface Proposal {
+  banner: string;
+  heading: string;
+  copy: string;
+}

@@ -1,55 +1,38 @@
 "use client";
 import { gallery } from "@/lib/data";
-import { motion, useAnimate, stagger } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+
+const galleryAnimation = {
+  hidden: {
+    opacity: 0,
+    y: 100,
+  },
+  visible: (index: number) => ({
+    opacity: 1,
+    rotateY: 360,
+    y: 0,
+    transition: {
+      delay: 0.5 * index,
+      duration: 0.8,
+    },
+  }),
+};
 
 export default function Gallery() {
-  const [animatedImages, setAnimatedImages] = useState<number[]>([]);
-  const observer = useRef<IntersectionObserver | null>(null);
-  const [scope, animate] = useAnimate();
-
-  useEffect(() => {
-    observer.current = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const imageIndex = parseInt(
-              entry.target.getAttribute("data-index") || "0",
-              10,
-            );
-            setAnimatedImages((prev) => [...prev, imageIndex]);
-          }
-        });
-      },
-      { threshold: 1 },
-    );
-    document.querySelectorAll(".gallery-image").forEach((img) => {
-      observer.current?.observe(img);
-    });
-
-    return () => {
-      if (observer.current) {
-        observer.current.disconnect();
-      }
-    };
-  }, [animatedImages]);
-
   return (
-    <section className="w-full">
+    <section className="w-full overflow-hidden">
       <div className="grid grid-cols-2 sm:grid-cols-4">
         {gallery.map((image, i) => (
           <motion.div
             key={i}
-            initial={{ opacity: 0, scale: 0.5, x: 50 }}
-            animate={
-              animatedImages.includes(i)
-                ? { opacity: 1, scale: 1, x: 0 }
-                : { opacity: 0, scale: 0.5, x: 50 }
-            }
-            transition={{ duration: 0.5 }}
-            className="gallery-image"
-            data-index={i}
+            initial="hidden"
+            variants={galleryAnimation}
+            whileInView="visible"
+            viewport={{
+              once: true,
+            }}
+            custom={i}
           >
             <picture className="h-full w-full">
               <source

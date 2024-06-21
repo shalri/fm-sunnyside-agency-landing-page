@@ -31,60 +31,70 @@
   /* This worked on last project  now it's broken */
   /* background: url(../public/images/mobile/image-stand-out.jpg) no-repeat center; */
 
-  background: url(/images/mobile/image-header.jpg) no-repeat center;
+  background: url(/fm-sunnyside-agency/images/mobile/image-header.jpg) no-repeat
+    center;
   background-size: cover;
   background-position: bottom;
 }
 .stand-out-bg {
-  background: url(/images/mobile/image-stand-out.jpg) no-repeat center;
+  background: url(/fm-sunnyside-agency/images/mobile/image-stand-out.jpg)
+    no-repeat center;
   background-size: cover;
   background-position: center;
 }
 .transform-bg {
-  background: url(/images/mobile/image-transform.jpg) no-repeat center;
+  background: url(/fm-sunnyside-agency/images/mobile/image-transform.jpg)
+    no-repeat center;
   background-size: cover;
   background-position: center;
 }
 .graphic-design-bg {
-  background: url(/images/mobile/image-graphic-design.jpg) no-repeat center;
+  background: url(/fm-sunnyside-agency/images/mobile/image-graphic-design.jpg)
+    no-repeat center;
   background-size: cover;
   background-position: top;
 }
 .photography-bg {
-  background: url(/images/mobile/image-photography.jpg) no-repeat center;
+  background: url(/fm-sunnyside-agency/images/mobile/image-photography.jpg)
+    no-repeat center;
   background-size: cover;
   background-position: top;
 }
-@media (min-width: 768px) {
+@media (min-width: 764px) {
   .hero-bg {
     /* Change to this url when deploying weird bug in NextJS. First time this
    * happend */
-    /* background: url(/fm-sunnyside-agency-landing-page/images/mobile/image-header.jpg) */
+    /* background: url(/fm-sunnyside-agency-landing-page/fm-sunnyside-agency/images/mobile/image-header.jpg) */
     /*   no-repeat center; */
     /* This worked on last project  now it's broken */
-    /* background: url(../public/images/mobile/image-stand-out.jpg) no-repeat center; */
+    /* background: url(../public/fm-sunnyside-agency/images/mobile/image-stand-out.jpg) no-repeat center; */
 
-    background: #3dbeff url(/images/desktop/image-header.jpg) no-repeat center;
+    background: #3dbeff
+      url(/fm-sunnyside-agency/images/desktop/image-header.jpg) no-repeat center;
     background-size: contain;
     background-position: bottom;
   }
   .stand-out-bg {
-    background: url(/images/desktop/image-stand-out.jpg) no-repeat center;
+    background: url(/fm-sunnyside-agency/images/desktop/image-stand-out.jpg)
+      no-repeat center;
     background-size: cover;
     background-position: center;
   }
   .transform-bg {
-    background: url(/images/desktop/image-transform.jpg) no-repeat center;
+    background: url(/fm-sunnyside-agency/images/desktop/image-transform.jpg)
+      no-repeat center;
     background-size: cover;
     background-position: center;
   }
   .graphic-design-bg {
-    background: url(/images/desktop/image-graphic-design.jpg) no-repeat center;
+    background: url(/fm-sunnyside-agency/images/desktop/image-graphic-design.jpg)
+      no-repeat center;
     background-size: cover;
     background-position: top;
   }
   .photography-bg {
-    background: url(/images/desktop/image-photography.jpg) no-repeat center;
+    background: url(/fm-sunnyside-agency/images/desktop/image-photography.jpg)
+      no-repeat center;
     background-size: cover;
     background-position: top;
   }
